@@ -4,12 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@600&family=Merriweather:wght@700&family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dist/main.css" />
-    <title>Document</title>
-</head>
-
-<body>
+    <title>Algo-Animator</title>
     <script src="./dist/main.js"></script>
+    <script type="text/javascript">
+        let BFS_ID = null;
+        let DFS_ID = null;
+        let DIJKSTRA_ID = null;
+    </script>
+    <link rel="icon" type="image/png" sizes="16x16" href="./app/assets/images/binary-tree.svg">
+</head>
+<body>
+    <div id="header">
+        <strong>Welcome to Algo-Animator!</strong>
+    </div>
+    <div id="main">
+        <div id="main-div">
+            <canvas id="canvas" width="1310" height="710"></canvas>
+        </div>
+        <div id="options-panel">
+            <span id="optionspanel-Algo">Algorithms</span>
+            <button id="dfs-button">DFS</button>
+            <button id="bfs-button">BFS</button>
+            <button id="dijkstras-button">Dijkstras</button>
+            <span id="optionspanel-Buttons">Actions</span>
+            <button id="reset-button">Clear All</button>
+            <button id="keepwalls-button">Clear Path Only</button>
+            <button id="addwalls-button">Add Walls</button>
+            <button id="addweights-button">Add Weight</button>
+            <button id="myBtn">Help</button>
+        </div>
+        <div id="myModal" class="modal">
+            <div id="modal-content">
+                <span class="close">X</span>
+                <span id="modal-span" style="font-size: 38px;">Algo-Animator</span>
+                <strong id="modal-description">Algo-Animator is a visual demonstration of how certain path-finding algorithms behave
+                    when implemented!</strong>
+                <ul id="modal-points">
+                    <li>
+                        Drag the <strong class="underling" id="green">Starting</strong> and <strong class="underline" id="red">End</strong>
+                        nodes to the desired positions to be able to see different behavior of each algorithm.
+                    </li>
+                    <li>
+                        Choose an algorithm from the panel on the right, at any point you can stop the
+                        search by hitting <strong class="underline">Clear</strong>
+                    </li>
+                    <li>
+                        Add weights and walls to the grid by clicking <span>Add Walls</span>/<span>Add Weight</span>
+                        buttons; click and drag your mouse to build walls/weighted nodes and see how the algorithm handles it!
+                    </li>
+                </ul>
+                <span id="modal-span" style="font-size: 34px">Key</span>
+                <div id="modal-section-container">
+                    <div id="modal-key-section">
+                        <div id="modal-key-subsection">
+                            <img src="./app/assets/images/startpoint.png" alt="startpoint.png">
+                            <span id="modal-key-span">Startpoint</span>
+                        </div>
+                        <div id="modal-key-subsection">
+                            <img src="./app/assets/images/visited.png" alt="startpoint.png">
+                            <span id="modal-key-span">Visited</span>
+                        </div>
+                        <div id="modal-key-subsection">
+                            <img src="./app/assets/images/wall.png" alt="startpoint.png">
+                            <span id="modal-key-span">Wall</span>
+                        </div>
+                    </div>
+                    <div id="modal-key-section">
+                        <div id="modal-key-subsection">
+                            <img src="./app/assets/images/endpoint.png" alt="startpoint.png">
+                            <span id="modal-key-span">Endpoint</span>
+                        </div>
+                        <div id="modal-key-subsection">
+                            <img src="./app/assets/images/unvisited.png" alt="startpoint.png">
+                            <span id="modal-key-span">Unvisited</span>
+                        </div>
+                        <div id="modal-key-subsection">
+                            <img src="./app/assets/images/weight.png" alt="startpoint.png">
+                            <span id="modal-key-span">Weight</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
