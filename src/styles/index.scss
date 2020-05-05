@@ -1,7 +1,8 @@
-html {
+html, body {
     background-image: linear-gradient(0deg, #EDF5E1, #5CDB95); 
 	-webkit-animation: bg-pan-top 8s both;
-	        animation: bg-pan-top 8s both;
+          animation: bg-pan-top 8s both;
+  margin: 0;
 }
 
 #main{
