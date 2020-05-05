@@ -11,8 +11,6 @@ window.addEventListener("DOMContentLoaded", () => {
   let wallsActivated = false;
   let weightsActivated = false;
   let canvas = document.getElementById("canvas");
-  canvas.width = 1310;
-  canvas.height = 710;
   let ctx = canvas.getContext("2d");
   init();
   canvas.onmousedown = mouseDown;
