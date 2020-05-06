@@ -1,3 +1,4 @@
+[Live Site](https://stevenyee123.github.io/Algo-Animator/)
 # Algo-Animator
 Welcome to **Algo-Animator!** A fun and interactive way to showcase some common pathfinding algorithms. Algo-Animator provides the features to allow the user change the start and end points. Users can also add walls to block certain paths, and even create "weighted" nodes to represent more "costly" paths and really show off how algorithms will handle different situations! Users will be able to see visual representations of Breadth-First Search, Depth-First Search, and Dijkstra's Algorithm. 
 ### Technologies Used
